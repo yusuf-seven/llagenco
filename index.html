@@ -8,20 +8,6 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KFTH2M25');</script>
-    ```
-
-**2. Inject the GTM Body Fallback (Noscript)**
-* **Identify:** Scroll down to locate the opening `<body>` tag in your `index.html` file.
-* **Action:** Paste the GTM `noscript` iframe immediately after the opening `<body>` tag, before the `<header>` begins.
-* **Code Snippet:**
-```html
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFTH2M25"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    ```
-
-**Note on Step 3 (Testing):** You can now test the container implementation using the GTM Preview mode or the Google Tag Assistant extension in your browser once you load the file locally or deploy it to a staging server.
-
-This is a wise, methodical approach to tracking infrastructure. Once you verify the base container is firing successfully, would you like me to map out the `onclick` DataLayer pushes for the conversion buttons so we can track the exact revenue events?
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -53,6 +39,10 @@ This is a wise, methodical approach to tracking infrastructure. Once you verify 
     </script>
 </head>
 <body>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFTH2M25"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <header class="site-header">
         <nav class="main-nav">
             <a href="index.html" class="logo">LLAGOX</a>
@@ -66,7 +56,7 @@ This is a wise, methodical approach to tracking infrastructure. Once you verify 
                 <div class="lang-switch">
                     <span class="lang-disabled" title="Coming Soon">TR</span> | <span class="active">EN</span> | <span class="lang-disabled" title="Coming Soon">DE</span>
                 </div>
-                <a href="https://wa.me/905511085382?text=Hello%20LLAGOX%2C%0A%0AI%20would%20like%20to%20order%201x%20Premium%20Hydrolyzed%20Collagen%20Peptides%20%289.90%20EUR%29.%20Please%20send%20me%20the%20secure%20payment%20and%20shipping%20details." target="_blank" rel="noopener noreferrer" class="btn-cta">Buy Now</a>
+                <a href="https://wa.me/905511085382?text=Hello%20LLAGOX%2C%0A%0AI%20would%20like%20to%20order%201x%20Premium%20Hydrolyzed%20Collagen%20Peptides%20%289.90%20EUR%29.%20Please%20send%20me%20the%20secure%20payment%20and%20shipping%20details." target="_blank" rel="noopener noreferrer" class="btn-cta" onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'initiate_checkout', 'value': 9.90, 'currency': 'EUR'});">Buy Now</a>
             </div>
         </nav>
     </header>
@@ -78,7 +68,7 @@ This is a wise, methodical approach to tracking infrastructure. Once you verify 
                 <h1>Premium Hydrolyzed Collagen Peptides</h1>
                 <p>Restore your body's foundation from within. Our premium, bioavailable collagen peptides absorb rapidly to replenish what time takes away.</p>
                 
-                <a href="https://wa.me/905511085382?text=Hello%20LLAGOX%2C%0A%0AI%20would%20like%20to%20order%201x%20Premium%20Hydrolyzed%20Collagen%20Peptides%20%289.90%20EUR%29.%20Please%20send%20me%20the%20secure%20payment%20and%20shipping%20details." target="_blank" rel="noopener noreferrer" class="btn-hero">Buy Now via WhatsApp</a>
+                <a href="https://wa.me/905511085382?text=Hello%20LLAGOX%2C%0A%0AI%20would%20like%20to%20order%201x%20Premium%20Hydrolyzed%20Collagen%20Peptides%20%289.90%20EUR%29.%20Please%20send%20me%20the%20secure%20payment%20and%20shipping%20details." target="_blank" rel="noopener noreferrer" class="btn-hero" onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'initiate_checkout', 'value': 9.90, 'currency': 'EUR'});">Buy Now via WhatsApp</a>
                 
                 <ul class="trust-anchors">
                     <li><span class="check">✓</span> Free TR Shipping</li>
@@ -190,7 +180,7 @@ This is a wise, methodical approach to tracking infrastructure. Once you verify 
 
             <div class="pathway-cta">
                 <p>Start your 30-day structural reset today.</p>
-                <a href="https://wa.me/905511085382?text=Hello%20LLAGOX%2C%0A%0AI%20would%20like%20to%20order%201x%20Premium%20Hydrolyzed%20Collagen%20Peptides%20%289.90%20EUR%29.%20Please%20send%20me%20the%20secure%20payment%20and%20shipping%20details." target="_blank" rel="noopener noreferrer" class="btn-cta">Buy Now</a>
+                <a href="https://wa.me/905511085382?text=Hello%20LLAGOX%2C%0A%0AI%20would%20like%20to%20order%201x%20Premium%20Hydrolyzed%20Collagen%20Peptides%20%289.90%20EUR%29.%20Please%20send%20me%20the%20secure%20payment%20and%20shipping%20details." target="_blank" rel="noopener noreferrer" class="btn-cta" onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'initiate_checkout', 'value': 9.90, 'currency': 'EUR'});">Buy Now</a>
             </div>
 
         </section>
