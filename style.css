@@ -1,6 +1,7 @@
-/* Enable Native SPA Scrolling */
-html {
+/* Enable Native SPA Scrolling & Disable Scroll Anchoring */
+html, body {
     scroll-behavior: smooth;
+    overflow-anchor: none;
 }
 
 /* Core Variables & Palette */
@@ -134,31 +135,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* Mobile Header Responsiveness */
-@media (max-width: 768px) {
-    /* Hide secondary elements to prioritize the conversion funnel */
-    .nav-links, 
-    .lang-switch {
-        display: none;
-    }
-
-    /* Maximize horizontal real estate */
-    .main-nav {
-        padding: 1rem;
-    }
-
-    /* Scale down the logo for balance */
-    .logo {
-        font-size: 1.25rem;
-    }
-
-    /* Refine CTA proportions for touch targets without dominating the screen */
-    .btn-cta {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-}
-
 /* =========================================
    Hero Section
    ========================================= */
@@ -270,6 +246,13 @@ main {
 
 /* Mobile Responsiveness (Stacked Layout) */
 @media (max-width: 768px) {
+
+    /* Mobile Header Rescue: Hide clutter, force edge alignment */
+    .nav-links, 
+    .lang-switch {
+        display: none;
+    }
+
     .hero {
         flex-direction: column;
         padding: 2rem 1.5rem;
