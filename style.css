@@ -1,3 +1,8 @@
+/* Enable Native SPA Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Core Variables & Palette */
 :root {
     --bg-sand: #F9F6F0;
