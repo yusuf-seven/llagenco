@@ -573,3 +573,9 @@ main {
     opacity: 1;
     text-decoration: underline;
 }
+
+/* Temporary Lockdown: Hide all WhatsApp CTA buttons */
+.btn-cta,
+.btn-hero {
+    display: none !important;
+}
